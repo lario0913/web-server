@@ -9,7 +9,7 @@ const forecast = (lat, long, callback) => {
             callback('unable to forecast the location, please check the coordinates and try again', undefined)
         }else{
             callback(undefined, {
-                weather : response.body.current.weather_descriptions[0]
+                weather : response.body.current.weather_descriptions[0] + ' with a temperature of ' + response.body.current.temperature + ' degrees.'
             })
         }
     })
